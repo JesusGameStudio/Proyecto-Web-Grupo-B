@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centipede Wars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+        }
+        header h1, h3{
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        section {
+            padding: 20px 20px 200px 20px;
+            display: none;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .PaginaPrincipal {
+            display: flex;
+            align-items: center;
+        }
+        .imagen{
+            max-width: 500px; 
+            margin-right: 20px;
+            margin-left: 650px;
+        }
+        .texto{
+            top: 10px;
+            left: 10px;
+        }
+        #menu-lateral-campaña {
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            width: 200px;
+            top: 690px;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        #menu-lateral-campaña ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #menu-lateral-campaña ul li {
+            margin-bottom: 10px;
+        }
+        #menu-lateral-campaña ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #menu-lateral-recompensas {
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            width: 200px;
+            top: 690px;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        #menu-lateral-recompensas ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #menu-lateral-recompensas ul li {
+            margin-bottom: 10px;
+        }
+        #menu-lateral-recompensas ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Centipede Wars</h1>
+        <h3>Muchos Pies, Mucha Emoción</h3>
+        <div class="PaginaPrincipal">
+        <img class="imagen" src="https://media.istockphoto.com/id/1255353265/vector/illustration-of-centipede-on-white-background.jpg?s=612x612&w=0&k=20&c=Vo8-Krds9nOmz6fIZLovG79nrgTuc8NYyq9BQyT-0F0=" widht="500px" height= "500px"/>
+        <div class="texto">
+            <h4>Centipede es un juego multijugador estratégico en el que varios ciempiés se enfrentarán en una ardua batalla de la que solo 1 saldrá vencedor.</h4>
+            <h5>Creado por</h5>
+            <p>START STUDIOS</p>
+        </div>
+    </div>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('Campaña')">Campaña</a>
+        <a href="#" onclick="showPage('Recompensas')">Recompensas</a>
+        <a href="#" onclick="showPage('Preguntas Frecuentes')">Preguntas frecuentes</a>
+        <a href="#" onclick="showPage('Comentarios')">Comentarios</a>
+    </nav>
+
+    <div id="menu-lateral-campaña" class="submenu">
+        <nav>
+            <ul>
+                <li><a href="#VideoPromocional">Video Promocional</a></li>
+                <li><a href="#Descripcion">Descripcion</a></li>
+                <li><a href="#Objetivos">Objetivos</a></li>
+                <li><a href="#Equipo">Equipo</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="menu-lateral-recompensas" class="submenu">
+        <nav>
+            <ul>
+                <li><a href="#Recompensa1">Recompensa nº1</a></li>
+                <li><a href="#Recompensa2">Recompensa nº2</a></li>
+                <li><a href="#Recompensa3">Recompensa nº3</a></li>
+                <li><a href="#Recompensa4">Recompensa nº4</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="Campaña">
+        <div id="VideoPromocional">
+        <div id="Descripcion">
+        <h2>Descripción</h2>
+        <p>Descripción detalla del juego.</p>
+        </div>
+        <div id="Objetivos">
+        <h2>Objetivos</h2>
+        <p>Dinero para que la campaña siguiera adelante.</p>
+        </div>
+        <div id="Equipo">
+        <h2>Equipo</h2>
+        <p>Integrantes del equipo.</p>
+        </div>
+    </section>
+
+    <section id="Recompensas">
+        <h2>Recompensa nº1</h2>
+        <p>Aquí se mostrará la recompensa nº1 del juego por donar.</p>
+        <h2>Recompensa nº2</h2>
+        <p>Aquí se mostrará la recompensa nº2 del juego por donar.</p>
+        <h2>Recompensa nº3</h2>
+        <p>Aquí se mostrará la recompensa nº3 del juego por donar.</p>
+        <h2>Recompensa nº4</h2>
+        <p>Aquí se mostrará la recompensa nº4 del juego por donar.</p>
+    </section>
+
+    <section id="Preguntas Frecuentes">
+        <h2>1ªPregunta</h2>
+        <p>Aquí se mostrará la respuesta a la 1ªpregunta de la comunidad.</p>
+        <h2>2ªPregunta</h2>
+        <p>Aquí se mostrará la respuesta a la 2ªpregunta de la comunidad.</p>
+        <h2>3ªPregunta</h2>
+        <p>Aquí se mostrará la respuesta a la 3ªpregunta de la comunidad.</p>
+        <h2>4ªPregunta</h2>
+        <p>Aquí se mostrará la respuesta a la 4ªpregunta de la comunidad.</p>
+    </section>
+
+    <section id="Comentarios">
+        <p>Aquí se mostrarán las opiniones y comentarios de la comunidad.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Centipede Wars. ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio
+         y no representa un producto real. Práctica de Multimedia, 1o GDDV - Curso 23/24
+         (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
+    </footer>
+
+    <script>
+
+        window.onload = function() {
+        showPage('Campaña');
+        }
+        function showPage(pageId) {
+
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            var pageToShow = document.getElementById(pageId);
+            if (pageToShow) {
+                pageToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
