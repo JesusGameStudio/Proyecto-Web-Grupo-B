@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centipede Wars</title>
     <style>
+        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -39,6 +40,9 @@
             padding: 20px 20px 200px 20px;
             display: none;
         }
+        section.active {
+            display: block;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -61,55 +65,42 @@
             top: 10px;
             left: 10px;
         }
-        #menu-lateral-campaña {
+        .submenu {
             background-color: #444;
             color: #fff;
-            position: fixed;
-            width: 200px;
+            position: absolute;
             top: 690px;
             right: 0;
-            bottom: 0;
-            padding: 20px;
-            overflow-y: auto;
+            padding: 10px;
+            display: none;
         }
-        #menu-lateral-campaña ul {
+        .submenu ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-        #menu-lateral-campaña ul li {
-            margin-bottom: 10px;
+        .submenu ul li {
+            margin-bottom: 5px;
         }
-        #menu-lateral-campaña ul li a {
+        .submenu ul li a {
             color: #fff;
             text-decoration: none;
         }
-        #menu-lateral-recompensas {
-            background-color: #444;
+        .recompensas-boton {
+            background-color: #007bff;
             color: #fff;
-            position: fixed;
-            width: 200px;
-            top: 690px;
-            right: 0;
-            bottom: 0;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        #menu-lateral-recompensas ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        #menu-lateral-recompensas ul li {
-            margin-bottom: 10px;
-        }
-        #menu-lateral-recompensas ul li a {
-            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
             text-decoration: none;
+            cursor: pointer;
+        }
+        .recompensas-boton:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
-<body>
+<body onload="showPage('Campaña')">
     <header>
         <h1>Centipede Wars</h1>
         <h3>Muchos Pies, Mucha Emoción</h3>
@@ -130,83 +121,122 @@
         <a href="#" onclick="showPage('Comentarios')">Comentarios</a>
     </nav>
 
-    <div id="menu-lateral-campaña" class="submenu">
-        <nav>
+    <section id="Campaña">
+        <div class="submenu">
             <ul>
                 <li><a href="#VideoPromocional">Video Promocional</a></li>
-                <li><a href="#Descripcion">Descripcion</a></li>
-                <li><a href="#Objetivos">Objetivos</a></li>
+                <li><a href="#Descripcion">Descripción</a></li>
+                <li><a href="#Historia">Historia</a></li>
+                <li><a href="#Gameplay">Gameplay</a></li>
+                <li><a href="#Objetivo">Objetivos</a></li>
                 <li><a href="#Equipo">Equipo</a></li>
             </ul>
-        </nav>
-    </div>
-
-    <div id="menu-lateral-recompensas" class="submenu">
-        <nav>
-            <ul>
-                <li><a href="#Recompensa1">Recompensa nº1</a></li>
-                <li><a href="#Recompensa2">Recompensa nº2</a></li>
-                <li><a href="#Recompensa3">Recompensa nº3</a></li>
-                <li><a href="#Recompensa4">Recompensa nº4</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <section id="Campaña">
-        <div id="VideoPromocional">
-        <div id="Descripcion">
-        <h2>Descripción</h2>
-        <p>Descripción detalla del juego.</p>
         </div>
-        <div id="Objetivos">
-        <h2>Objetivos</h2>
-        <p>Dinero para que la campaña siguiera adelante.</p>
+        <div id="VideoPromocional">
+        <p>Aqui inserte el video promocional</p>
+        </div>
+        <div id="Descripcion">
+        <h2>Descripción e Historia</h2>
+        <p>Aquí se encontraría una extensa descripción del videojuego</p>
+        </div>
+        <div id="Historia">
+        <h2>Historia</h2>
+        <p>Aquí se encontraría un texto extenso hablando de la historia</p>
+        </div>
+        <div id="Gameplay">
+        <h2>Gameplay</h2>
+        <p>Aquí se encontraría un gameplay</p>
+        </div>
+        <div id="Objetivo">
+        <h2>Objetivo</h2>
+        <p>Aquí se diría el objetivo del videojuego</p>
         </div>
         <div id="Equipo">
         <h2>Equipo</h2>
-        <p>Integrantes del equipo.</p>
+        <p>Aquí se encontraría al grupo creador del videojuego y la pagina</p>
         </div>
     </section>
 
     <section id="Recompensas">
-        <h2>Recompensa nº1</h2>
-        <p>Aquí se mostrará la recompensa nº1 del juego por donar.</p>
-        <h2>Recompensa nº2</h2>
-        <p>Aquí se mostrará la recompensa nº2 del juego por donar.</p>
-        <h2>Recompensa nº3</h2>
-        <p>Aquí se mostrará la recompensa nº3 del juego por donar.</p>
-        <h2>Recompensa nº4</h2>
-        <p>Aquí se mostrará la recompensa nº4 del juego por donar.</p>
+        <div class="submenu">
+            <ul>
+                <li><a href="#Explorer">Explorer</a></li>
+                <li><a href="#Collector">Collector</a></li>
+                <li><a href="#Adventurer">Adventurer</a></li>
+                <li><a href="#Strategist">Strategist</a></li>
+                <li><a href="#GroupExplorer">Group Explorer</a></li>
+                <li><a href="#ExpeditionLeader">Expedition Leader</a></li>
+            </ul>
+        </div>
+        <div id="Explorer">
+        <h2>Explorer</h2>
+        <p>Embárcate en una emocionante aventura con una copia digital de "Centipede Wars". Además, recibirás una baraja extra de cartas en el juego y tu nombre será mencionado en los créditos del juego.</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $5</a>
+        </div>
+        <div id="Collector">
+        <h2>Collector</h2>
+        <p>Únete a la acción con una copia digital de "Centipede Wars", recibirás un paquete especial de cartas exclusivas en el juego y los perks de la contribución "Explorer". ¡Prepárate para la batalla!</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $10</a>
+        </div>
+        <div id="Adventurer">
+        <h2>Adventurer</h2>
+        <p> Hazte con el manual físico exclusivo de "Centipede Wars",que contendrá todos los secretos y cartas a coleccionar, además de los perks de las contribuciones "Explorer" y "Collector".</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $15</a>
+        </div>
+        <div id="Strategist">
+        <h2>Strategist</h2>
+        <p>Demuestra tus habilidades estratégicas con la guía exclusiva de "Centipede Wars", además de una baraja premium de cartas y los perks de las contribuciones anteriores. ¡Conviértete en el maestro de la jungla!</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $20</a>
+        </div>
+        <div id="GroupExplorer">
+        <h2>Group Explorer</h2>
+        <p>Obtén cuatro copias del juego "Centipede Wars" para compartir con amigos y familiares, cada una con una selección exclusiva de cartas digitales y los perks de todas las contribuciones anteriores</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $30</a>
+        </div>
+        <div id="ExpeditionLeader">
+        <h2>Expedition Leader</h2>
+        <p>Lidera la expedición con una edición de lujo de "Centipede Wars", que incluye acceso al juego, una colección premium de cartas digitales, un set exclusivo de avatares y tu nombre destacado en los créditos del juego. También recibirás los perks de todas las contribuciones anteriores.</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $50</a>
+        </div>
     </section>
 
     <section id="Preguntas Frecuentes">
-        <h2>1ªPregunta</h2>
-        <p>Aquí se mostrará la respuesta a la 1ªpregunta de la comunidad.</p>
-        <h2>2ªPregunta</h2>
-        <p>Aquí se mostrará la respuesta a la 2ªpregunta de la comunidad.</p>
-        <h2>3ªPregunta</h2>
-        <p>Aquí se mostrará la respuesta a la 3ªpregunta de la comunidad.</p>
-        <h2>4ªPregunta</h2>
-        <p>Aquí se mostrará la respuesta a la 4ªpregunta de la comunidad.</p>
+        <div class="submenu">
+            <ul>
+                <li><a href="#">1ª Pregunta</a></li>
+                <li><a href="#">2ª Pregunta</a></li>
+                <li><a href="#">3ª Pregunta</a></li>
+                <li><a href="#">4ª Pregunta</a></li>
+            </ul>
+        </div>
+        <div id="Pregunta1">
+        <h2>1ª Pregunta</h2>
+        <p>Respuesta a la 1ª Pregunta</p>
+        </div>
+        <div id="Pregunta2">
+        <h2>2ª Pregunta</h2>
+        <p>Respuesta a la 2ª Pregunta</p>
+        </div>
+        <div id="Pregunta3">
+        <h2>3ª Pregunta</h2>
+        <p>Respuesta a la 3ª Pregunta</p>
+        </div>
+        <div id="Pregunta4">
+        <h2>4ª Pregunta</h2>
+        <p>Respuesta a la 4ª Pregunta</p>
+        </div>
     </section>
 
     <section id="Comentarios">
-        <p>Aquí se mostrarán las opiniones y comentarios de la comunidad.</p>
+        <p>comentarios xd</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Centipede Wars. ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio
-         y no representa un producto real. Práctica de Multimedia, 1o GDDV - Curso 23/24
-         (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
+        <p>&copy; 2024 Centipede Wars. ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1o GDDV - Curso 23/24 (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
     </footer>
 
     <script>
-
-        window.onload = function() {
-        showPage('Campaña');
-        }
         function showPage(pageId) {
-
             var sections = document.querySelectorAll('section');
             sections.forEach(function(section) {
                 section.style.display = 'none';
@@ -215,6 +245,16 @@
             var pageToShow = document.getElementById(pageId);
             if (pageToShow) {
                 pageToShow.style.display = 'block';
+            }
+
+            var submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+
+            var submenuToShow = document.querySelector('#' + pageId + ' .submenu');
+            if (submenuToShow) {
+                submenuToShow.style.display = 'block';
             }
         }
     </script>
