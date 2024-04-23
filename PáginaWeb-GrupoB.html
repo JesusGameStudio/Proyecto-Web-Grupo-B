@@ -27,25 +27,136 @@
         header h4,h5,p{
             padding: 20px;
         }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        section {
+            padding-top: 400px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 200px;
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .PaginaPrincipal {
+            display: flex;
+            align-items: center;
+        }
+        .imagen{
+            max-width: 25%;
+            height: 25%;
+            margin-right: 100px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .texto{
+            left: 10px;
+        }
+        .submenu {
+            background-color: #444;
+            color: #fff;
+            position: fixed;
+            top: 690px;
+            right: 0;
+            padding: 10px;
+            display: none;
+        }
+        .submenu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .submenu ul li {
+            margin-bottom: 5px;
+        }
+        .submenu ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .recompensas-boton {
+            background-color: #E6B739;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .recompensas-boton:hover {
+            background-color: #0056b3;
+        }
+        #Descripcion h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+        }
+        #Historia h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+        }
+        #Gameplay h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+        }
+        #Objetivo h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+        }
+        #Objetivo h3 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 7px;
+        }
+        #Equipo h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+        }
     </style>
 </head>
-    <body>
+    <body onload="showPage('Campaña')">
         <header>
         <h1>Centipede Wars</h1>
         <h3>Muchos Pies, Mucha Emoción</h3>
         <div class="PaginaPrincipal">
         <img class="imagen" src="https://media.istockphoto.com/id/1255353265/vector/illustration-of-centipede-on-white-background.jpg?s=612x612&w=0&k=20&c=Vo8-Krds9nOmz6fIZLovG79nrgTuc8NYyq9BQyT-0F0=" widht="300px" height= "300px"/>
-        <h4>Centipede es un juego multijugador estratégico en el que varios ciempiés se enfrentarán en una ardua batalla de la que solo 1 saldrá vencedor.</h4>
-        <h5>Creado por</h5>
-        <p>START STUDIOS</p>
-        <img src="https://i.pinimg.com/originals/19/bf/92/19bf9238284c1ee460062ddbe549ed46.png" widht="125px" height= "125px"/>
+        <div class="texto">
+                <h4>Centipede es un juego multijugador estratégico en el que varios ciempiés se enfrentarán en una ardua batalla de la que solo 1 saldrá vencedor.</h4>
+                <h5>Creado por</h5>
+                <p>START STUDIOS</p>
+                <img src="https://i.pinimg.com/originals/19/bf/92/19bf9238284c1ee460062ddbe549ed46.png" widht="125px" height= "125px"/>
+            </div>
+        </div>
         </header>
+
         <nav id="menu" class="menu-fixed">
         <a href="#" onclick="showPage('Campaña')">Campaña</a>
         <a href="#" onclick="showPage('Recompensas')">Recompensas</a>n
         <a href="#" onclick="showPage('Preguntas Frecuentes')">Preguntas frecuentes</a>
         <a href="#" onclick="showPage('Comentarios')">Comentarios</a>
         </nav>
+
         <section id="Campaña">
         <div class="submenu">
             <ul>
@@ -56,6 +167,45 @@
                 <li><a href="#Objetivo">Objetivos</a></li>
                 <li><a href="#Equipo">Equipo</a></li>
             </ul>
+        </div>
+        <div id="VideoPromocional">
+        <p>Aqui inserte el video promocional</p>
+        </div>
+        <div id="Descripcion">
+        <h2>Descripción e Historia</h2>
+        <p>Aquí se encontraría una extensa descripción del videojuego</p>
+        </div>
+        <div id="Historia">
+        <h2>Historia</h2>
+        <p>Aquí se encontraría un texto extenso hablando de la historia</p>
+        </div>
+        <div id="Gameplay">
+        <h2>Gameplay</h2>
+        <p>Aquí se encontraría un gameplay</p>
+        </div>
+        <div id="Objetivo">
+        <h2>Objetivos</h2>
+        <h3>Objetivo Principal: $10,000</h3>
+        <p> Financiará el desarrollo completo del juego, incluyendo diseño, programación y pruebas.</p>
+        <h3>Objetivos Adicionales</h3>
+        <h4>$15,000</h4>
+        <h5>Más cartas</h5>
+        <p>Ampliar la biblioteca de cartas, agregando más variedad y estrategias.</p>
+        <h4>$20,000</h4>
+        <h5>Nuevas características</h5>
+        <p>Agregar nuevas características al juego, como modos de juego adicionales y opciones de personalización de cartas.</p>
+        <h4>$25,000</h4>
+        <h5>Versión para movil</h5>
+        <p>Desarrollar una versión móvil del juego para que los jugadores puedan disfrutarlo en cualquier lugar</p>
+        <h4>$30,000</h4>
+        <h5>Versión para consolas</h5>
+        <p>Desarrollar una versión para consolas de alta definición, para que los jugadores puedan disfrutarlo desde su consola favorita.</p>
+        <h4>Tu apoyo es esencial para llevar "Centipede Wars" a nuevas alturas. ¡Únete a nuestra expedición y sé parte de esta emocionante aventura de cartas!</h4>
+        <a href="#" onclick="showPage('Recompensas')" class="recompensas-boton">Link Donaciones</a>
+        </div>
+        <div id="Equipo">
+        <h2>Equipo</h2>
+        <p>Aquí se encontraría al grupo creador del videojuego y la pagina</p>
         </div>
         </section>
         <section id="Recompensas">
@@ -69,6 +219,36 @@
                 <li><a href="#ExpeditionLeader">Expedition Leader</a></li>
             </ul>
         </div>
+        <div id="Explorer" class="Recompensa">
+        <h2>Explorer</h2>
+        <p>Embárcate en una emocionante aventura con una copia digital de "Centipede Wars". Además, recibirás una baraja extra de cartas en el juego y tu nombre será mencionado en los créditos del juego.</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $5</a>
+        </div>
+        <div id="Collector" class="Recompensa">
+        <h2>Collector</h2>
+        <p>Únete a la acción con una copia digital de "Centipede Wars", recibirás un paquete especial de cartas exclusivas en el juego y los perks de la contribución "Explorer". ¡Prepárate para la batalla!</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $10</a>
+        </div>
+        <div id="Adventurer" class="Recompensa">
+        <h2>Adventurer</h2>
+        <p> Hazte con el manual físico exclusivo de "Centipede Wars",que contendrá todos los secretos y cartas a coleccionar, además de los perks de las contribuciones "Explorer" y "Collector".</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $15</a>
+        </div>
+        <div id="Strategist" class="Recompensa">
+        <h2>Strategist</h2>
+        <p>Demuestra tus habilidades estratégicas con la guía exclusiva de "Centipede Wars", además de una baraja premium de cartas y los perks de las contribuciones anteriores. ¡Conviértete en el maestro de la jungla!</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $20</a>
+        </div>
+        <div id="GroupExplorer" class="Recompensa">
+        <h2>Group Explorer</h2>
+        <p>Obtén cuatro copias del juego "Centipede Wars" para compartir con amigos y familiares, cada una con una selección exclusiva de cartas digitales y los perks de todas las contribuciones anteriores</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $30</a>
+        </div>
+        <div id="ExpeditionLeader" class="Recompensa">
+        <h2>Expedition Leader</h2>
+        <p>Lidera la expedición con una edición de lujo de "Centipede Wars", que incluye acceso al juego, una colección premium de cartas digitales, un set exclusivo de avatares y tu nombre destacado en los créditos del juego. También recibirás los perks de todas las contribuciones anteriores.</p>
+        <a href="comprar_recompensa.html" class="recompensas-boton">Contribuye $50</a>
+        </div>
         </section>
         <section id="Preguntas Frecuentes">
         <div class="submenu">
@@ -79,11 +259,50 @@
                 <li><a href="#">4ª Pregunta</a></li>
             </ul>
         </div>
+        <div id="Pregunta1">
+        <h2>1ª Pregunta</h2>
+        <p>Respuesta a la 1ª Pregunta</p>
+        </div>
+        <div id="Pregunta2">
+        <h2>2ª Pregunta</h2>
+        <p>Respuesta a la 2ª Pregunta</p>
+        </div>
+        <div id="Pregunta3">
+        <h2>3ª Pregunta</h2>
+        <p>Respuesta a la 3ª Pregunta</p>
+        </div>
+        <div id="Pregunta4">
+        <h2>4ª Pregunta</h2>
+        <p>Respuesta a la 4ª Pregunta</p>
+        </div>
         </section>
         <section id="Comentarios">
         </section>
         <footer>
         <p>&copy; 2024 Centipede Wars. ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1o GDDV - Curso 23/24 (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
         </footer>
-    </body>
+        <script>
+        function showPage(pageId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            var pageToShow = document.getElementById(pageId);
+            if (pageToShow) {
+                pageToShow.style.display = 'block';
+            }
+
+            var submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+
+            var submenuToShow = document.querySelector('#' + pageId + ' .submenu');
+            if (submenuToShow) {
+                submenuToShow.style.display = 'block';
+            }
+        }
+    </script>
+</body>
 </html>
