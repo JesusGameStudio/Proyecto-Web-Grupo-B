@@ -29,9 +29,11 @@
         }
         header h1, h3{
             text-align: center;
+            font-size: 30px;
         }
         header h4,h5,p{
             padding: 20px;
+            font-size: 20px;
         }
         nav {
             background-color: #444;
@@ -82,11 +84,14 @@
         .texto{
             left: 10px;
         }
+        #menu a{
+            font-size: 20px;
+        }
         .submenu {
             background-color: #444;
             color: #fff;
             position: fixed;
-            top: 640px;
+            top: 590px;
             right: 0;
             padding: 10px;
             display: none;
@@ -102,6 +107,7 @@
         .submenu ul li a {
             color: #fff;
             text-decoration: none;
+            font-size: 20px;
         }
         .recompensas-boton {
             background-color: #E6B739;
@@ -139,6 +145,51 @@
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
         }
+        .TopDonadores h2, h3, h4{
+            text-align: center;
+        }
+        #Comentarios {
+            background-color: #f5f5f5; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+        #contenedor-comentarios {
+            margin-bottom: 20px; 
+        }
+        #Comentarios h3 {
+            color: #333;
+            font-size: 30px; 
+            margin-bottom: 10px; 
+        }
+        #SeccionComentarios {
+            font-family: Arial, sans-serif; 
+        }
+        #SeccionComentarios label {
+            display: block; 
+            font-weight: bold; 
+            margin-bottom: 5px;
+            margin-top: 50px;
+            font-size: 30px; 
+        }
+        #SeccionComentarios textarea {
+            width: 100%; 
+            padding: 8px; 
+            margin-bottom: 50px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+        }
+        #SeccionComentarios button {
+            background-color: #E6B739;
+            color: #fff; 
+            border: none; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-bottom: 200px; 
+            transition: background-color 0.3s; 
+            font-size: 30px; 
+        }
         @media screen and (max-width: 600px)
         {
             nav, section, footer{
@@ -156,6 +207,9 @@
                 padding: 10px;
                 height: 40px;
             }
+            .submenu {
+                top: 690px;
+            }
         }
     </style>
 </head>
@@ -164,12 +218,12 @@
         <h1>Centipede Wars</h1>
         <h3>Muchos Pies, Mucha Emoción</h3>
         <div class="PaginaPrincipal">
-        <img class="imagen" src="https://raw.githubusercontent.com/JesusGameStudio/Proyecto-Web-Grupo-B/master/Logo_Centipide.jpg" widht="500px" height= "500px"/>
+        <img class="imagen" src="https://raw.githubusercontent.com/JesusGameStudio/Proyecto-Web-Grupo-B/master/Imagen_Promocional.png" widht="500px" height= "500px"/>
         <div class="texto">
             <h4>Centipede es un juego multijugador estratégico en el que varios ciempiés se enfrentarán en una ardua batalla de la que solo 1 saldrá vencedor.</h4>
             <h5>Creado por</h5>
             <p>START STUDIOS</p>
-            <img src="" widht="125px" height= "125px"/>
+            <img src="https://raw.githubusercontent.com/JesusGameStudio/Proyecto-Web-Grupo-B/master/Logo_Equipo.png" widht="250px" height= "250px"/>
         </div>
     </div>
     </header>
@@ -194,10 +248,14 @@
             </ul>
         </div>
         <div id="VideoPromocional">
-        <p>Aqui inserte el video promocional</p>
+            <video width="640" height="360" controls>
+            <source src="URL_DEL_VIDEO" type="video/mp4">
+            </video>
         </div>
         <div id="CancionOriginal">
-        <p>Aqui inserte la canción original</p>
+        <audio controls>
+        <source src="URL_DEl_AUDIO" type="audio/mp3">
+        </audio>
         </div>
         <div id="Descripcion">
         <h2>Descripción</h2>
@@ -212,7 +270,9 @@
         </div>
         <div id="Gameplay">
         <h2>Gameplay</h2>
-        <p>Aquí se encontraría un gameplay</p>
+            <video width="640" height="360" controls>
+            <source src="URL_DEL_GAMEPLAY" type="video/mp4">
+            </video>
         </div>
         <div id="Objetivo">
         <h2>Objetivos</h2>
@@ -250,6 +310,15 @@
                 <li><a href="#GroupExplorer">Group Explorer</a></li>
                 <li><a href="#ExpeditionLeader">Expedition Leader</a></li>
             </ul>
+        </div>
+        <div id="TopDonadores" class="Recompensa">
+            <h2>Top Donadores</h2>
+            <h3>Top 1</h3>
+            <h4>Nombre Donador Nº1</h4>
+            <h3>Top 2</h3>
+            <h4>Nombre Donador Nº2</h4>
+            <h3>Top 3</h3>
+            <h4>Nombre Donador Nº3</h4>
         </div>
         <div id="Explorer" class="Recompensa">
         <h2>Explorer</h2>
@@ -311,10 +380,10 @@
     </section>
 
     <section id="Comentarios">
-        <div id="comentarios-container">
+        <div id="contenedor-comentarios">
             </div>
             <h3>Escribe aquí tu comentario:</h3>
-            <form id="commentForm">
+            <form id="SeccionComentarios">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required><br><br>
                 <label for="comentario">Comentario:</label><br>
@@ -351,17 +420,17 @@
         }
     </script>
     <script>
-    document.getElementById('commentForm').addEventListener('submit', function(event) {
+    document.getElementById('SeccionComentarios').addEventListener('submit', function(event) {
         event.preventDefault();
 
         var nombre = document.getElementById('nombre').value;
         var comentario = document.getElementById('comentario').value;
 
-        var newComment = document.createElement('div');
-        newComment.innerHTML = '<strong>' + nombre + ':</strong> ' + comentario;
+        var comentarioNuevo = document.createElement('div');
+        comentarioNuevo.innerHTML = '<strong>' + nombre + ':</strong> ' + comentario;
 
-        var comentariosContainer = document.getElementById('comentarios-container');
-        comentariosContainer.appendChild(newComment);
+        var contenedorComentarios = document.getElementById('contenedor-comentarios');
+        contenedorComentarios.appendChild(comentarioNuevo);
 
         document.getElementById('nombre').value = '';
         document.getElementById('comentario').value = '';
