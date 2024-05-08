@@ -189,13 +189,6 @@
             <h3>Escribe aquí tu comentario:</h3>
             <div id="contenedor-comentarios">
             </div>
-            <form id="SeccionComentarios">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-                <label for="comentario">Comentario:</label><br>
-                <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Enviar comentario</button>
-            </form>
     </section>
 
     <footer>
@@ -223,28 +216,17 @@
             if (submenuToShow) {
                 submenuToShow.style.display = 'block';
             }
-        }
+        if (pageId === 'Comentarios') {
+        var disqus_config = function () {
+            this.page.url = "https://jesusgamestudio.github.io/Proyecto-Web-Grupo-B/";  // Reemplaza PAGE_URL con la URL canónica de tu página
+            this.page.identifier = "CentipideWars"; // Reemplaza PAGE_IDENTIFIER con el identificador único de tu página
+        };
+
+        var d = document, s = d.createElement('script');
+        s.src = 'https://centipidewars.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    }
     </script>
-    
-    <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    
-    var disqus_config = function () {
-    this.page.url = "https://jesusgamestudio.github.io/Proyecto-Web-Grupo-B/";  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = CentipideWars; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://centipidewars.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<script id="dsq-count-scr" src="//centipidewars.disqus.com/count.js" async></script>
 </body>
 </html>
