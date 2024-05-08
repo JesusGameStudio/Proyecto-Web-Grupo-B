@@ -22,32 +22,40 @@
     </div>
     </header>
     <nav id="menu" class="menu-fixed">
-        <a href="#" onclick="showPage('Campaña')">Campaña</a>
-        <a href="#" onclick="showPage('Recompensas')">Recompensas</a>
-        <a href="#" onclick="showPage('Preguntas Frecuentes')">Preguntas frecuentes</a>
-        <a href="#" onclick="showPage('Comentarios')">Comentarios</a>
+        <a href="#Campaña" onclick="showPage('Campaña')">Campaña</a>
+        <a href="#Recompensas" onclick="showPage('Recompensas')">Recompensas</a>
+        <a href="#PreguntasFrecuentes" onclick="showPage('PreguntasFrecuentes')">Preguntas frecuentes</a>
+        <a href="#Comentarios" onclick="showPage('Comentarios')">Comentarios</a>
+        <a href="#Contacto" onclick="showPage('Contacto')">Contacto</a>
     </nav>
     <section id="Campaña">
         <div class="submenu">
             <ul>
                 <li><a href="#VideoPromocional">Video Promocional</a></li>
+                <li><a href="#CancionOriginal">Canción Original</a></li>                
                 <li><a href="#Descripcion">Descripción</a></li>
                 <li><a href="#Historia">Historia</a></li>
                 <li><a href="#Gameplay">Gameplay</a></li>
                 <li><a href="#Objetivo">Objetivos</a></li>
                 <li><a href="#Equipo">Equipo</a></li>
-                <li><a href="#CancionOriginal">Canción Original</a></li>
+
             </ul>
         </div>
         <div id="VideoPromocional">
-            <video width="640" height="360" controls>
-            <source src="Video/Video Promocional Centipede Wars.mp4" type="video/mp4">
-            </video>
+            <h2>Video Promocional</h2>
+            <div class="VideoPromocional">
+                <video width="640" height="360" controls>
+                <source src="Video/Video Promocional Centipede Wars.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
         <div id="CancionOriginal">
-        <audio controls>
-        <source src="Audio/Cancion_cienpies.mp3" type="audio/mp3">
-        </audio>
+        <h2>Canción Original</h2>
+        <div class="CancionOriginal">
+            <audio controls>
+            <source src="Audio/Cancion_cienpies.mp3" type="audio/mp3">
+            </audio>
+        </div>
         </div>
         <div id="Descripcion">
         <h2>Descripción</h2>
@@ -62,9 +70,12 @@
         </div>
         <div id="Gameplay">
         <h2>Gameplay</h2>
+        <div class="VideoGameplay">
             <video width="640" height="360" controls>
             <source src="Video/Gameplay Centipede Wars.mp4" type="video/mp4">
             </video>
+        </div>
+        <p>¡Podrás probar la demo de nuestro juego aquí!: <a href="https://scratch.mit.edu/projects/991492112/">Demo en Scratch</a></p>
         </div>
         <div id="Objetivo">
         <h2>Objetivos</h2>
@@ -84,7 +95,9 @@
         <h5>Versión para consolas</h5>
         <p>Desarrollar una versión para consolas de alta definición, para que los jugadores puedan disfrutarlo desde su consola favorita.</p>
         <h4>Tu apoyo es esencial para llevar "Centipede Wars" a nuevas alturas. ¡Únete a nuestra expedición y sé parte de esta emocionante aventura de cartas!</h4>
-        <a href="#" onclick="showPage('Recompensas')" class="recompensas-boton">Link Donaciones</a>
+        <div id="enlace-donaciones">
+        <a class="recompensas-boton" href="#Recompensas" onclick="showPage('Recompensas')" class="recompensas-boton">Link Donaciones</a>
+        </div>
         </div>
         <div id="Equipo">
         <h2>Equipo</h2>
@@ -154,7 +167,7 @@
         <a class="recompensas-boton" onclick="alert('Contribuiste con $50');">Contribuye $50</a>
         </div>
     </section>
-    <section id="Preguntas Frecuentes">
+    <section id="PreguntasFrecuentes">
         <div class="submenu">
             <ul>
                 <li><a href="#">1ª Pregunta</a></li>
@@ -191,6 +204,21 @@
                 <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br><br>
                 <button type="submit">Enviar comentario</button>
             </form>
+    </section>
+    <section id="Contacto">
+        <div class="redes-sociales">
+            <h2>¡Nuestras redes sociales!</h2>
+            <p>
+            <a href="https://twitter.com/CentipedeWars">¡Nuestra cuenta de X!</a>
+            </p>
+            <p>
+            <a href="https://www.instagram.com/centipedewars?igsh=Y3BhMzUwcms0dnhy">¡Nuestra cuenta de Instagram!</a>
+            </p>
+        </div>
+        <div class="correo">
+            <p>Nuestro correo es: centipedewars@gmail.com</p>
+        </div>
+        </div>
     </section>
     <footer>
         <p class="copyright">&copy; 2024 Centipede Wars.</p>

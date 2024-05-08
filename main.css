@@ -14,6 +14,7 @@
             margin: 0;
             padding: 0;
             flex-wrap: wrap;
+            text-align: center;
         }
         header {
             background-color: #333;
@@ -38,6 +39,7 @@
         header h4,h5,p{
             padding: 20px;
             font-size: 20px;
+            text-align: center; 
         }
         nav {
             background-color: #444;
@@ -136,19 +138,34 @@
             border-radius: 4px;
             text-decoration: none;
             cursor: pointer;
+            margin: 10px;
         }
         .recompensas-boton:hover {
             background-color: #0056b3;
         }
+        #CancionOriginal h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+            font-size: 30px;
+            align-content: center;
+        }
+        #VideoPromocional h2 {
+            font-family: Centipede, sans-serif;
+            letter-spacing: 10px;
+            font-size: 30px;
+            text-align: center;
+        }    
         #Descripcion h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
             font-size: 30px;
+            text-align: center;
         }
         #Historia h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
             font-size: 30px;
+            text-align: center;
         }
         #Gameplay h2 {
             font-family: Centipede, sans-serif;
@@ -157,25 +174,76 @@
             font-size: 30px; 
         }
 
-        .VideoGameplay{
+        #Equipo p {
+            text-align: center;
+        }
+
+        #Pregunta1 h2 {
+            font-size: 25px;
+            text-align: center;
+        }  
+
+        #Pregunta2 h2 {
+            font-size: 25px;
+            text-align: center;
+        }  
+
+        #Pregunta3 h2 {
+            font-size: 25px;
+            text-align: center;
+        }  
+
+        #Pregunta4 h2 {
+            font-size: 25px;
+            text-align: center;
+        }    
+
+        #enlace-donaciones {
+            margin-top: 20px;
+        }
+
+        .VideoGameplay {
             
             justify-content:space-around;
-            border: 5px solid black;
-        }   
+            align-content: center;
+            display: flex;
+        }
+
+        .VideoPromocional {
+            
+            justify-content:space-around;
+            align-content: center;
+            display: flex;
+        }    
+
+        .CancionOriginal {
+            
+            justify-content:space-around;
+            align-content: center;
+            display: flex;
+        }     
+
+        .Recompensa h2 {
+            font-size: 25px;
+            text-align: center;
+        } 
 
         #Objetivo h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
             font-size: 30px;
+            text-align: center;
         }
         #Objetivo h3 {
             font-family: Centipede, sans-serif;
             letter-spacing: 7px;
+            text-align: center;
         }
         #Equipo h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
             font-size: 30px;
+            text-align: center;
         }
         .TopDonadores h2, h3, h4{
             text-align: center;
