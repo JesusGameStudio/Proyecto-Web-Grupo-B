@@ -5,7 +5,7 @@
     <meta name=“viewport” content=“width=device-width, initial-scale=1” />
     <title>Centipede Wars</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-   
+    
 </head>
 <body onload="showPage('Campaña')">
     <header id="Encabezado" class="Encabezado-fixed">
@@ -21,14 +21,12 @@
         </div>
     </div>
     </header>
-
     <nav id="menu" class="menu-fixed">
         <a href="#" onclick="showPage('Campaña')">Campaña</a>
         <a href="#" onclick="showPage('Recompensas')">Recompensas</a>
         <a href="#" onclick="showPage('Preguntas Frecuentes')">Preguntas frecuentes</a>
         <a href="#" onclick="showPage('Comentarios')">Comentarios</a>
     </nav>
-
     <section id="Campaña">
         <div class="submenu">
             <ul>
@@ -64,11 +62,9 @@
         </div>
         <div id="Gameplay">
         <h2>Gameplay</h2>
-        <div class="VideoGameplay">
             <video width="640" height="360" controls>
             <source src="Video/Gameplay Centipede Wars.mp4" type="video/mp4">
             </video>
-        </div>
         </div>
         <div id="Objetivo">
         <h2>Objetivos</h2>
@@ -98,7 +94,7 @@
         <h3>ALEJANDRO MARÍN SÁNCHEZ</h3>
         <h4>Fuente original de letra, creación de redes sociales, editor del video promocional, historia del juego y apartado de preguntas frecuentes. En un futuro, administrador de redes sociales.</h4>
         <h3>CARLOS MARTINEZ GARCIA</h3>
-        <h4>Apartado de contribuciones, apartado de objetivos y creador de música original. En un futuro, creador de música para el videojuego.</h4>
+        <h4>Apartado de contribuciones, apartado de objetivos y creador de música original. En un futuro, creador de la música y efectos de sonido para el videojuego.</h4>
         <h3>IVAN PALACIOS MARTIN</h3>
         <h4>Creación de la demo de Centipede Wars, creación de la parte artística de los ciempiés, apartado reglas del juego(falta por añadir) e implemantación de interactividad en la página web. En un futuro programador del juego.</h4>
         <h3>LUIS PRIETO GONZÁLEZ</h3>
@@ -107,7 +103,6 @@
         <h4>Programador mayoritario de la página web. En un futuro, administrador de la página web.</h4>
         </div>
     </section>
-
     <section id="Recompensas">
         <div class="submenu">
             <ul>
@@ -159,7 +154,6 @@
         <a class="recompensas-boton" onclick="alert('Contribuiste con $50');">Contribuye $50</a>
         </div>
     </section>
-
     <section id="Preguntas Frecuentes">
         <div class="submenu">
             <ul>
@@ -186,7 +180,6 @@
         <p>¡No! Ningún ciempiés real ha sido perjudicado en el proceso de creación de este juego. :D</p>
         </div>
     </section>
-
     <section id="Comentarios">
             <h3>Escribe aquí tu comentario:</h3>
             <div id="contenedor-comentarios">
@@ -199,28 +192,23 @@
                 <button type="submit">Enviar comentario</button>
             </form>
     </section>
-
     <footer>
         <p>&copy; 2024 Centipede Wars. ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. Práctica de Multimedia, 1o GDDV - Curso 23/24 (Móstoles), URJC. La URJC no se hace responsable del contenido expuesto por el autor.</p>
     </footer>
-
     <script>
         function showPage(pageId) {
             var sections = document.querySelectorAll('section');
             sections.forEach(function(section) {
                 section.style.display = 'none';
             });
-
             var pageToShow = document.getElementById(pageId);
             if (pageToShow) {
                 pageToShow.style.display = 'block';
             }
-
             var submenus = document.querySelectorAll('.submenu');
             submenus.forEach(function(submenu) {
                 submenu.style.display = 'none';
             });
-
             var submenuToShow = document.querySelector('#' + pageId + ' .submenu');
             if (submenuToShow) {
                 submenuToShow.style.display = 'block';
@@ -243,6 +231,26 @@
         document.getElementById('nombre').value = '';
         document.getElementById('comentario').value = '';
     });
+
+    <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+    this.page.url = "https://jesusgamestudio.github.io/Proyecto-Web-Grupo-B/index.html";  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = "CentipideWars"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://centipidewars.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//centipidewars.disqus.com/count.js" async></script>
 </body>
 </html>
