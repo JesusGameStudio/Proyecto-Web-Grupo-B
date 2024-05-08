@@ -1,3 +1,9 @@
+        *{
+            margin: 0;
+            padding: 5px 5px;
+            border: 0;
+            vertical-align: baseline;
+        }
         @font-face{
             font-family: Centipede;
             src: url("Fuente/centipede.ttf") format('truetype');
@@ -18,10 +24,16 @@
         header h1{
            font-family: Centipede, sans-serif; 
            letter-spacing: 10px;
+           font-size: 35px;
+           text-align: center;
         }
-        header h1, h3{
+        header h2{
             text-align: center;
-            font-size: 30px;
+            font-size: 25px;
+        }
+        header h3{
+           font-size: 30px;
+           text-align: center;   
         }
         header h4,h5,p{
             padding: 20px;
@@ -48,7 +60,7 @@
             padding-left: 20px;
             padding-right: 20px;
             padding-bottom: 200px;
-            display: none;
+            display: flex;
         }
         section.active {
             display: block;
@@ -71,7 +83,10 @@
             height: 50%;
             margin-right: 100px;
             margin-left: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 20px; 
+        }
+          .logo{
+            border-radius: 20px;
         }
         .texto{
             left: 10px;
@@ -116,18 +131,30 @@
         #Descripcion h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
+            font-size: 30px;
         }
         #Historia h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
+            font-size: 30px;
         }
         #Gameplay h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
+            text-align: center;  
+            font-size: 30px; 
         }
+
+        .VideoGameplay{
+            
+            justify-content:space-around;
+            border: 5px solid black;
+        }   
+
         #Objetivo h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
+            font-size: 30px;
         }
         #Objetivo h3 {
             font-family: Centipede, sans-serif;
@@ -136,6 +163,7 @@
         #Equipo h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
+            font-size: 30px;
         }
         .TopDonadores h2, h3, h4{
             text-align: center;
