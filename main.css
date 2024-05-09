@@ -100,6 +100,8 @@
             margin-bottom: 20px; 
         }
        .imgciempies{
+            width: 10%;
+            height: 10%;
             display: flex;
         }
           .logo{
