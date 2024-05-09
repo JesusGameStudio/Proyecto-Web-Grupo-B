@@ -103,6 +103,7 @@
             width: 10%;
             height: 10%;
             display: flex;
+            border-radious: 20px;
         }
           .logo{
             border-radius: 20px;
