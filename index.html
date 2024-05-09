@@ -243,6 +243,43 @@
         <p class="info">Práctica de Multimedia, 1o GDDV - Curso 23/24 (Móstoles), URJC.</p>
         <p class="disclaimer">ATENCIÓN: Esta página simula la campaña de microfinanciación de un videojuego ficticio y no representa un producto real. La URJC no se hace responsable del contenido expuesto por el autor.</p>
     </footer>
+    <script>
+        function showPage(pageId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            var pageToShow = document.getElementById(pageId);
+            if (pageToShow) {
+                pageToShow.style.display = 'block';
+            }
+            var submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(function(submenu) {
+                submenu.style.display = 'none';
+            });
+            var submenuToShow = document.querySelector('#' + pageId + ' .submenu');
+            if (submenuToShow) {
+                submenuToShow.style.display = 'block';
+            }
+        }
+    </script>
+    <script>
+    document.getElementById('SeccionComentarios').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var nombre = document.getElementById('nombre').value;
+        var comentario = document.getElementById('comentario').value;
+
+        var comentarioNuevo = document.createElement('div');
+        comentarioNuevo.innerHTML = '<strong>' + nombre + ':</strong> ' + comentario;
+
+        var contenedorComentarios = document.getElementById('contenedor-comentarios');
+        contenedorComentarios.appendChild(comentarioNuevo);
+
+        document.getElementById('nombre').value = '';
+        document.getElementById('comentario').value = '';
+    });
+    </script>
     <div id="disqus_thread"></div>
 <script>
     /**
