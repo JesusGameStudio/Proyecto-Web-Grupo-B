@@ -148,6 +148,45 @@
         .recompensas-boton:hover {
             background-color: #0056b3;
         }
+        .juego-boton {
+            background-color: #79C1FC;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .juego-boton:hover {
+            background-color: #0056b3;
+        }
+        .Twitter-boton {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .Twitter-boton:hover {
+            background-color: #0056b3;
+        }
+        .Instagram-boton {
+            background-color: #FF7DEB;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .Instagram-boton:hover {
+            background-color: #0056b3;
+        }
         #CancionOriginal h2 {
             font-family: Centipede, sans-serif;
             letter-spacing: 10px;
@@ -252,48 +291,6 @@
         }
         .TopDonadores h2, h3, h4{
             text-align: center;
-        }
-        #Comentarios {
-            background-color: #f5f5f5; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        }
-        #contenedor-comentarios {
-            margin-bottom: 20px; 
-        }
-        #Comentarios h3 {
-            color: #333;
-            font-size: 30px; 
-            margin-bottom: 10px; 
-        }
-        #SeccionComentarios {
-            font-family: Arial, sans-serif; 
-        }
-        #SeccionComentarios label {
-            display: block; 
-            font-weight: bold; 
-            margin-bottom: 5px;
-            margin-top: 50px;
-            font-size: 30px; 
-        }
-        #SeccionComentarios textarea {
-            width: 100%; 
-            padding: 8px; 
-            margin-bottom: 50px; 
-            border: 1px solid #ccc; 
-            border-radius: 5px;
-        }
-        #SeccionComentarios button {
-            background-color: #E6B739;
-            color: #fff; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            margin-bottom: 200px; 
-            transition: background-color 0.3s; 
-            font-size: 30px; 
         }
         #Equipo h3{
             font-size: 20px;
