@@ -75,7 +75,7 @@
             <source src="Video/Gameplay Centipede Wars.mp4" type="video/mp4">
             </video>
         </div>
-        <p>¡Podrás probar la demo de nuestro juego aquí!: <a href="https://scratch.mit.edu/projects/991492112/">Demo en Scratch</a></p>
+        <p>¡Podrás probar la demo de nuestro juego aquí!: <a class="juego-boton" href="https://scratch.mit.edu/projects/991492112/">Demo en Scratch</a>
         </div>
         <div id="Objetivo">
         <h2>Objetivos</h2>
@@ -212,18 +212,16 @@
         </div>
     </section>
     <section id="Comentarios">
-            <h3>Escribe aquí tu comentario:</h3>
-            <div id="contenedor-comentarios">
+    <!-- Contenedor para Disqus (inicialmente oculto) -->
+    <div id="disqusContainer" style="display: none;">
+        <div id="disqus_thread"></div>
+    </div>
     </section>
     <section id="Contacto">
         <div class="redes-sociales">
             <h2>¡Nuestras redes sociales!</h2>
-            <p>
-            <a href="https://twitter.com/CentipedeWars">¡Nuestra cuenta de X!</a>
-            </p>
-            <p>
-            <a href="https://www.instagram.com/centipedewars?igsh=Y3BhMzUwcms0dnhy">¡Nuestra cuenta de Instagram!</a>
-            </p>
+            <p><a class="Twitter-boton" href="https://twitter.com/CentipedeWars">¡Nuestra cuenta de X!</a></p>
+            <p><a class="Instagram-boton" href="https://www.instagram.com/centipedewars?igsh=Y3BhMzUwcms0dnhy">¡Nuestra cuenta de Instagram!</a></p>
         </div>
         <div class="correo">
             <p>Nuestro correo es: centipedewars@gmail.com</p>
@@ -242,6 +240,17 @@
                 section.style.display = 'none';
             });
             var pageToShow = document.getElementById(pageId);
+                if (pageToShow) {
+                    pageToShow.style.display = 'block';
+       
+                if (pageId === 'Comentarios') {
+                    document.getElementById('disqusContainer').style.display = 'block';
+                } 
+                else {
+                    document.getElementById('disqusContainer').style.display = 'none';
+                }
+            }
+            var pageToShow = document.getElementById(pageId);
             if (pageToShow) {
                 pageToShow.style.display = 'block';
             }
@@ -254,23 +263,6 @@
                 submenuToShow.style.display = 'block';
             }
         }
-    </script>
-    <script>
-    document.getElementById('SeccionComentarios').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var nombre = document.getElementById('nombre').value;
-        var comentario = document.getElementById('comentario').value;
-
-        var comentarioNuevo = document.createElement('div');
-        comentarioNuevo.innerHTML = '<strong>' + nombre + ':</strong> ' + comentario;
-
-        var contenedorComentarios = document.getElementById('contenedor-comentarios');
-        contenedorComentarios.appendChild(comentarioNuevo);
-
-        document.getElementById('nombre').value = '';
-        document.getElementById('comentario').value = '';
-    });
     </script>
     <div id="disqus_thread"></div>
 <script>
