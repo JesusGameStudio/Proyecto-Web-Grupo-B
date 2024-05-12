@@ -4,19 +4,25 @@
             vertical-align: baseline;
             box-sizing: border-box;
         }
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+        
         @font-face{
             font-family: Centipede;
             src: url("Fuente/centipede.ttf") format('truetype');
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Jersey 10", sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
             position: relative;
             color: white;
-        }
+            background-color: #333;
+            background-image: url("Imagen/fondociempies.jpg");
+            background-attachment: fixed;
+            background-position: center;
+        }   
         header {
             background-color: #193C34;
             color: #fff;
@@ -26,23 +32,23 @@
         header h1{
            font-family: Centipede, sans-serif; 
            letter-spacing: 10px;
-           font-size: 35px;
+           font-size: 45px;
            text-align: center;
            margin: 10px;
         }
         header h2{
             text-align: center;
-            font-size: 25px;
+            font-size: 35px;
             margin: 10px;
         }
         header h3{
-           font-size: 30px;
+           font-size: 40px;
            text-align: center;   
            margin: 10px;
         }
         header h4,h5,p{
             padding: 20px;
-            font-size: 20px;
+            font-size: 30px;
             text-align: center; 
             margin: 10px;
         }
@@ -67,7 +73,10 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-bottom: 60px;
-            background-color: #333;
+        }
+
+        section.active{
+            display: block;
         }
 
         footer {
@@ -124,11 +133,14 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            border-radius: 20px;
+
         }
         .cajaindividual{
             width: 250px;
             height: auto;
-            margin-bottom: 100px;
+            margin-bottom: 120px;
+            background-color: rgba(25, 60, 52, 0.5);
         }
         .cajarecompensas{
             display: flex;
@@ -232,6 +244,13 @@
         .Youtube-boton:hover {
             background-color: #0056b3;
         }
+          #CancionOriginal {
+            background-color: rgba(25, 60, 52, 0.5);
+          }
+
+          #Historia {
+            background-color: rgba(25, 60, 52, 0.5);
+          }
 
         #CancionOriginal h2 {
             font-family: Centipede, sans-serif;
@@ -271,22 +290,22 @@
         }
 
         #Pregunta1 h2 {
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
         }  
 
         #Pregunta2 h2 {
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
         }  
 
         #Pregunta3 h2 {
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
         }  
 
         #Pregunta4 h2 {
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
         }    
 
@@ -316,7 +335,7 @@
         }     
 
         .Recompensa h2 {
-            font-size: 25px;
+            font-size: 35px;
             text-align: center;
         } 
 
@@ -338,7 +357,7 @@
             text-align: center;
         }
         #Equipo h4 {
-            font-size: 15px;
+            font-size: 25px;
         }
         .TopDonadores h2, h3, h4{
             text-align: center;
