@@ -102,8 +102,8 @@
             border-radius: 20px;
         }
        .imgciempies{
-            width: 10%;
-            height: 10%;
+            width: 50%;
+            height: 50%;
             border-radius: 20px;
         }
        .ciempiesreglas{
@@ -116,6 +116,18 @@
         }
         .texto{
             left: 10px;
+        }
+        .cajamiembros{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cajaindividual{
+            width: 250px;
+            height: auto;
+            margin-bottom: 100px;
+            border-width: 3px;
+            border-color: black;
         }
         #menu a{
             font-size: 20px;
@@ -310,6 +322,9 @@
             letter-spacing: 10px;
             font-size: 30px;
             text-align: center;
+        }
+        #Equipo h4 {
+            font-size: 15px;
         }
         .TopDonadores h2, h3, h4{
             text-align: center;
