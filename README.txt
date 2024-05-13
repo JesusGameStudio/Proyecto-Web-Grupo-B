@@ -1,0 +1,1 @@
+Es posible que la página en local tarde en cargar debido a los contenidos, se debe esperar a que todo cargue correctamente para la correcta visualización de la página.
